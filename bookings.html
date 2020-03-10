@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>Booking | Nepal Leisure Destination</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Barlow|Roboto+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	</head>
+	<body>
+        <center>
+        	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="static/images/logo-mountains.png" class="logo">
+                        <h6 style="color: rgba(0,0,0,0.7); display: inline;">Nepal Leisure Destination</h6>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <a class="nav-item nav-link nav-pages" href="trips.html">TRIPS</a>
+                            <a class="nav-item nav-link nav-pages" href="about.html">HISTORY</a>
+                            <a class="nav-item nav-link nav-pages" href="contact.html">CONTACT</a>
+                            <a class="nav-item nav-link nav-pages btn-light" href="#">BOOK YOUR TRIP</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Calendly inline widget -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/rubindesign/calendar" style="min-width:320px;height:630px;"></div>
+            <br><br>
+            <footer>
+                <a href="#"><img src="static/images/icon-mail.png" class="contact-icon"></a>
+                <a href="#"><img src="static/images/icon-insta.png" class="contact-icon"></a>
+                <a href="#"><img src="static/images/icon-whatsapp.png" class="contact-icon"></a>   
+                <br><br> 
+                <small>
+                    Nepal Expeditions © 2020
+                    <br>
+                    Website Created by <a href="http://rubinwebdesign.com/" target="_blank">Rubin Web Design</a>
+                </small>
+            </footer>
+            <br><br>
+            <!-- Calendly -->
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+            <!-- Bootstrap Navbar -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="static/js/bootstrap.js"></script>
+            <script type="text/javascript">
+                $(function () {
+                  $(document).scroll(function () {
+                    var $nav = $(".navbar-expand-lg");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                  });
+                });
+            </script>
+        </center>
+    </body>
+</html>
