@@ -273,6 +273,7 @@ small, small a {
     color: #373737!important; 
     letter-spacing: 0.4em; 
     font-size: 14px;
+    line-height: 2;
     transition: background 0.4s ease;
 }
 .main-btn:hover {
@@ -397,8 +398,7 @@ figure.effect-bubba:hover p {
 
 @media screen and (max-width: 50em) {
     .content {
-        padding: 0 10px;
-        text-align: center;
+        font-size: 36px;
     }
     .grid figure {
         display: inline-block;
@@ -408,25 +408,46 @@ figure.effect-bubba:hover p {
     }
 }
 
+/*carousel indicators */
+.carousel-indicators li, {
+  background: #f00 none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 50%;
+  height: 30px;
+  margin: 3px;
+  opacity: 0.5;
+  width: 30px;
+}
+/*active slide indicator */
+.carousel-indicators .active {
+  background: #fff none repeat scroll 0 0;
+  border: 4px solid #f00;
+}
+
 *, *:after, *:before {box-sizing: border-box;}
 .clearfix:before, .clearfix:after { display: table; content: ''; }
 .clearfix:after { clear: both; }
 
-/*Footer
-/*.footer-img {
-    position: relative;
-    z-index: -1;
-    bottom: 0;
-    height: 80vw;
-    background-image: linear-gradient(#fcfcfc, rgba(0,0,0,0), black), url(../images/P6120199.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: -10vw;
-}*/
-
-/*@media (min-width: 400px) {
-    .figcaption p {
-        display: none!important;
+@media (max-width: 500px) {
+    nav h6 {
+        font-size: 11px;
     }
-}*/
+    .effect-bubba h3 {
+        font-size: 24px!important;
+    }
+    figure h3 span, .effect-bubba:hover p {
+        display: none;
+    }
+    .carousel-caption h5 {
+        font-size: 22px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        display: none;
+    }
+    .trip-title {
+        padding-top: 30px;
+    }
+    .container-fluid {
+        max-width: 100%!important;
+    }
+}
