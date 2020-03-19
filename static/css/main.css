@@ -8,6 +8,7 @@ html, body {
     line-height: 1.1;
     background-color: #fcfcfc;
 }
+
 a {
     color: initial;
 }
@@ -107,7 +108,7 @@ header {
     top: 0;
     left: 0;
     z-index: 2000;
-    background-image: url("../images/_FLS3943.jpg");
+    background-image: url("../images/FLS3943.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -409,7 +410,7 @@ figure.effect-bubba:hover p {
 }
 
 /*carousel indicators */
-.carousel-indicators li, {
+.carousel-indicators li {
   background: #f00 none repeat scroll 0 0;
   border: 0 none;
   border-radius: 50%;
@@ -423,10 +424,6 @@ figure.effect-bubba:hover p {
   background: #fff none repeat scroll 0 0;
   border: 4px solid #f00;
 }
-
-*, *:after, *:before {box-sizing: border-box;}
-.clearfix:before, .clearfix:after { display: table; content: ''; }
-.clearfix:after { clear: both; }
 
 @media (max-width: 500px) {
     nav h6 {
