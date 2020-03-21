@@ -114,7 +114,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     animation: fadein 3s linear forwards;
 }
 .content {
@@ -431,5 +430,10 @@ figure.effect-bubba:hover p {
     }
     .container-fluid {
         max-width: 100%!important;
+    }
+}
+@media (min-width: 1025px) {
+    .bg {
+        background-attachment: fixed;
     }
 }
