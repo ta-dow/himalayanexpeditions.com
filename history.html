@@ -20,7 +20,17 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
-                            <a class="nav-item nav-link nav-pages" href="trips.html">TRIPS</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle nav-item nav-pages" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    TRIPS
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="trips-nepal.html">NEPAL</a>
+                                    <a class="dropdown-item" href="#">INDIA</a>
+                                    <a class="dropdown-item" href="#">CHINA</a>
+                                    <a class="dropdown-item" href="#">BHUTAN</a>
+                                </div>
+                            </li>
                             <a class="nav-item nav-link nav-pages" style="color: rgba(0,0,0,0.8);" href="#">HISTORY</a>
                             <a class="nav-item nav-link nav-pages" href="team.html">TEAM</a>
                             <a class="nav-item nav-link nav-pages btn-light" href="bookings.html">BOOK YOUR TRIP</a>
@@ -28,9 +38,9 @@
                     </div>
                 </div>
             </nav>
-            <br><br><br><br>
-        	<div class="container-fluid" style="max-width: 70%">
-        		<h4>Nepal</h4>
+            <br><br><br><br><br>
+        	<div class="container-fluid" style="max-width: 80%">
+        		<h2>Information on Nepal</h2>
         		<br><br>
         		<p class="text-left">
         			Nepal is a multicultural and multilingual country situated in the southern part of Asia. China borders to the north and India to the south, west and east. Kathmandu is the capital city and Nepali is the official language. Nepal has a diverse topography, including tropical lowland, subtropical hills, and ten of the world's tallest mountains: Mt. Everest (8,848m), Mt. Kangchenjunga (8,586m), Mt. Lhotse (8,516m), Mt. Makalu (8,481m), Mt. Cho Oyu (8,201 m), Mt. Dhaulagiri (8,167m), Mt. Manaslu (8,163m), and Mt Annapurna (8,091m).
@@ -52,53 +62,60 @@
 	        		<br><br>
 	        		After invading Malla Kings of Kathmandu valley in 1968 AD, formally Shah Dynasty ruled over Nepal. Prithvi Narayan Shah of Shah Dynasty (known as Founding Father of Modern Nepal) introduced the prominent features of the modern day of Nepal. Some of the fine art of Shah Dynasty is Kings ruled. Gyanendra Bir Bikram Shah is the last king of Shah Dynasty. On 28 May 2008, Nepal was declared as a Federal Democratic Republic and the monarchy was abolished, removing the Shah dynasty from power.
 	        	</p>
-	        	<br><br><br><br>
-	        	<h4>Sightseeing in Nepal</h4>
-	    		<br><br>
-        		<div class="row">
-        	    	<div class="col-sm">
-        	    		<a href="#">
-	        	    		<div class="card">
-	        	    		    <img class="card-img-top" src="static/images/FLS8684.jpg" style="opacity: 0.9">
-	        	    		    <br>
-	        	    		    <div class="card-body">
-	        	    		        <h3 class="card-title">Kathmandu Durbar Square</h3>
-	        	    		        <p class="card-text" style="color: #55585a">
-	        	    		        	Kathmandu Durbar square is another famous historical site listed in world heritage by UNESCO. It is known as Hanuman Dhoka Durbar Square, a name derived from a Hindu god Hanuman, the monkey devotee of Lord Ram.
-	        	    		        </p>
-	    		        		</div>
-    		        		</div>
-	        	      	</a>
-        	    	</div>
-        	    	<div class="col-sm">
-        	    		<a href="#">
-	        	    		<div class="card">
-	        	    		    <img class="card-img-top" src="static/images/FLS8423.jpg" style="opacity: 0.9">
-	        	    		    <br>
-	        	    		    <div class="card-body">
-	        	    		        <h3 class="card-title">Patan Durbar Square</h3>
-	        	    		        <p class="card-text" style="color: #55585a">
-	        	    		        	Patan Durbar Square is one of the famous historical sites of Nepal situated in Lalitpur district. It's been listed as a UNESCO World Heritage Site since 1979. This Durbar square is a masterpiece of Malla Dynasty.
-	        	    		        </p>
-	    		        		</div>
-    		        		</div>
-	        	      	</a>
-        	    	</div>
-        	    	<div class="col-sm">
-        	    		<a href="#">
-	        	    		<div class="card">
-	        	    		    <img class="card-img-top" src="static/images/FLS8313.jpg" style="opacity: 0.9">
-	        	    		    <br>
-	        	    		    <div class="card-body">
-	        	    		        <h3 class="card-title">Boudhanath & Swayambhunath</h3>
-	        	    		        <p class="card-text" style="color: #55585a">
-	        	    		        	Boudhanath is one of the largest stupas in Nepal and also one of the most popular tourist sites in the Kathmandu area. Swayambhunath is the holiest Buddhist site of Nepal, though  honored by both Buddhists, Hindus, and everyone alike.
-	        	    		        </p>
-	    		        		</div>
-    		        		</div>
-	        	      	</a>
-        	    	</div>
-        	  	</div>
+	        	<br>
+                <h4 id="sightseeing" style="padding-top: 50px">Sightseeing in Nepal</h4>
+                <br>
+                <div class="row">
+                    <div class="card-deck col-sm mb-3">
+                        <a href="#">
+                            <div class="card card-link">
+                                <img class="card-img-top" src="static/images/FLS8684.jpg" style="opacity: 0.9">
+                                <br>
+                                <div class="card-body d-flex flex-column" style="padding: 20px 30px">
+                                    <h3 class="card-title">Kathmandu Durbar Square</h3>
+                                    <p class="card-text text-left" style="color: #55585a">
+                                        Kathmandu Durbar square is another famous historical site listed in world heritage by UNESCO. It is known as Hanuman Dhoka Durbar Square, a name derived from a Hindu god Hanuman, the monkey devotee of Lord Ram.
+                                    </p>
+                                    <br>
+                                    <button type="button" class="mt-auto btn-lg btn-block btn-outline-primary btn-light main-btn">View Trip</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-deck col-sm mb-3">
+                        <a href="#">
+                            <div class="card card-link">
+                                <img class="card-img-top" src="static/images/FLS8423.jpg" style="opacity: 0.9">
+                                <br>
+                                <div class="card-body d-flex flex-column" style="padding: 20px 30px">
+                                    <h3 class="card-title">Patan Durbar Square</h3>
+                                    <p class="card-text text-left" style="color: #55585a">
+                                        Patan Durbar Square is one of the famous historical sites of Nepal situated in Lalitpur district. It's been listed as a UNESCO World Heritage Site since 1979. This Durbar square is a masterpiece of Malla Dynasty.
+                                    </p>
+                                    <br>
+                                    <button type="button" class="mt-auto btn-lg btn-block btn-outline-primary btn-light main-btn">View Trip</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-deck col-sm mb-3">
+                        <a href="#">
+                            <div class="card card-link">
+                                <img class="card-img-top" src="static/images/FLS8313.jpg" style="opacity: 0.9">
+                                <br>
+                                <div class="card-body d-flex flex-column" style="padding: 20px 30px">
+                                    <h3 class="card-title">Boudhanath & Swayambhunath</h3>
+                                    <p class="card-text text-left" style="color: #55585a">
+                                        Boudhanath is one of the largest stupas in Nepal and also one of the most popular tourist sites in the Kathmandu area. Swayambhunath is the holiest Buddhist site of Nepal, though  honored by both Buddhists, Hindus, and everyone alike.
+                                    </p>
+                                    <br>
+                                    <button type="button" class="mt-auto btn-lg btn-block btn-outline-primary btn-light main-btn">View Trip</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 	        	<br><br><br><br>
 	        	<footer>
                 	<a href="#"><img src="static/images/icon-mail.png" class="contact-icon"></a>
@@ -106,7 +123,7 @@
                     <a href="#"><img src="static/images/icon-whatsapp.png" class="contact-icon"></a>   
                     <br><br> 
                     <small>
-                        Nepal Expeditions © 2020
+                        Leisure Destination © 2020
                         <br>
                         Website Created by <a href="http://rubinwebdesign.com/" target="_blank">Rubin Web Design</a>
                     </small>

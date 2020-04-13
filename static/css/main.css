@@ -31,11 +31,21 @@ h1 {
 }
 h2 {
     display: block;
-    font-size: 8vw;
+    font-size: 60px;
     font-weight: 200;
     text-transform: uppercase;
     white-space: pre-line;
     width: 100%;
+}
+h3 {
+    font-size: 24px; 
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h3 span {
+    font-size: 16px;
+    font-weight:  200;
+    letter-spacing: 1px;
 }
 h4 {
     font-size: 35px;
@@ -48,25 +58,18 @@ h5 {
     letter-spacing: 0.35em;
     text-transform: uppercase;
 }
-h3 {
-    font-size: 24px; 
-    font-weight: 400;
-    text-transform: uppercase;
-}
-h3 span {
-    font-size: 16px;
-    font-weight:  200;
-    letter-spacing: 1px;
-}
 figcaption p {
     color: white;
 }
-p {
+p, #inner-content li {
     font-family: 'Raleway', sans-serif;
     color: #333;
-    opacity: 0.95;
     line-height: 2;
     font-weight: 200;
+}
+p span {
+    font-weight: bold;
+    color: black;
 }
 /*Jumbotron*/
 .lead {
@@ -79,30 +82,37 @@ p {
 /*Card*/
 .card {
     background: #f3f3f3;
-    min-height: 700px;
     margin-top: 35px;
     border-radius: 4px;
     box-shadow: 0 3px 12px 0 #ebebeb;
-    transition: all 0.3s;
     border: none;
 }
-.card:hover {
+.card-link {
+    height: 820px;
+    transition: all 0.3s;
+}
+.card-link:hover {
     box-shadow: 0 2px 30px 0 #ced3d6;
     transform: translateY(-10px);
 }
+.card-img-top {
+    object-fit: cover;
+    height: 300px;
+}
 
-/*Header Image*/
+/*Index Header Image*/
 header {
     align-items: center;
     background-color: black;
     background-size: cover;
     display: flex;
-    height: 50vh;
+    max-height: 50vh;
     justify-content: center;
     min-height: 500px;
     position: relative;
 }
 .bg {
+    background-image: url("../images/FLS3943.jpg");
     width: 100%;
     height: 100%;
     min-height: 500px;
@@ -110,7 +120,6 @@ header {
     top: 0;
     left: 0;
     z-index: 2000;
-    background-image: url("../images/FLS3943.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,11 +137,28 @@ header {
     from {filter: brightness(0%);}
     to   {filter: brightness(70%);}
 }
+/*Article Header Image*/
+.header-img {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.6;
+    background-color: black;
+}
 
 /*Navigation*/
 .navbar {
     z-index: 5000;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, .1);
+}
+.dropdown-menu {
+    top: 105%;
+    border: none;
+    box-shadow: 0 17px 20px 0 rgba(0,0,0,0.03);
+}
+.dropdown-item:active {
+    background-color: #446391;
 }
 .nav-pages {
     margin-right: 28px;
@@ -216,7 +242,7 @@ small, small a {
     position: relative;
     background: transparent;
     border: 1px solid #e1e1e1;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.4em;
     text-align: center;
     text-indent: 2px;
@@ -265,6 +291,7 @@ small, small a {
     color: white!important;
     background-color: #446391;
     border: none;
+    min-width: 200px;
 }
 .btn-light:hover {
     background-color: #00327d;
@@ -273,9 +300,8 @@ small, small a {
 .main-btn {
     background: #e1e1e1; 
     color: #373737!important; 
-    letter-spacing: 0.4em; 
-    font-size: 14px;
-    line-height: 2;
+    letter-spacing: 0.2em; 
+    font-size: 16px;
     transition: background 0.4s ease;
 }
 .main-btn:hover {
@@ -408,6 +434,16 @@ figure.effect-bubba:hover p {
         margin: 10px auto;
         width: 100%;
     }
+    h2 {
+        font-size: 40px;
+    }
+    .card-body {
+        margin: 0!important;
+        padding: 60px 0 30px;
+    }
+    .trips-icon {
+        display: none;
+    }
 }
 @media (max-width: 500px) {
     nav h6 {
@@ -419,7 +455,7 @@ figure.effect-bubba:hover p {
     figure h3 span, .effect-bubba:hover p {
         display: none;
     }
-    .carousel-caption h5 {
+    .carousel-caption h5, h3 {
         font-size: 22px;
     }
     .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -436,4 +472,9 @@ figure.effect-bubba:hover p {
     .bg {
         background-attachment: fixed;
     }
+}
+
+/*Bootstrap Tooltip*/
+.btn-secondary, .btn-secondary:hover, .btn-secondary:not(:disabled):not(.disabled):active {
+    background-color: #00000000;
 }
