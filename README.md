@@ -1,4 +1,4 @@
-# Demo Travel Agencey Site
+# Demo Travel Agency Site
 
 Example web design and development project for potential clients to evaluate my work.
 
