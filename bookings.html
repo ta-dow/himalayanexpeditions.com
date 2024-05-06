@@ -6,6 +6,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Barlow|Roboto+Mono&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="static/css/form.css">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
 	</head>
 	<body>
@@ -39,10 +40,47 @@
                     </div>
                 </div>
             </nav>
-            <!-- Calendly inline widget -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/rubindesign/calendar" style="min-width:320px;height:630px;"></div>
+            <br><br>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <div class="form-group">
+                    <section class="form-content">
+                        <h3 id="contact" style="padding-top: 30px">This demo website is for sale</h3>
+                        <small style="color: black;">If you are interested in buying it, please contact me.</small>
+                        <br><br><br>
+                        <input type="hidden" name="access_key" value="8456ac70-596a-4e43-9462-df3dc74573a4">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none">
+                        <input type="hidden" name="from_name" value="Contact Form">
+                        <span class="input input--yoshiko">
+                            <input class="input__field input__field--yoshiko" type="text" name="name" id="input-1" required>
+                            <label class="input__label input__label--yoshiko" for="input-1">
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Name">Name</span>
+                            </label>
+                        </span>
+                        <br>
+                        <span class="input input--yoshiko">
+                            <input class="input__field input__field--yoshiko" type="email" name="email" id="input-2" required>
+                            <label class="input__label input__label--yoshiko" for="input-2">
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Email">Email</span>
+                            </label>
+                        </span>
+                        <br>
+                        <span class="input input--yoshiko">
+                            <textarea class="input__field input__field--yoshiko" style="margin: 0" name="message" id="autoExpand" maxlength="500" required></textarea>
+                            <label class="input__label input__label--yoshiko" for="input-1">
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Message">Message</span>
+                            </label>
+                        </span>
+                        <br><br>
+                        <button class="codrops-button button--pan">
+                            <span>submit</span>
+                        </button>
+                    </section>
+                </div>
+            </form>
             <br>
-            <p class="font-weight-bold">This demo website is for sale. If you'd like to buy it, contact me via Calendly.</p>
+            <div id="success-message" class="success-message">
+                Thank you! Your message has been sent successfully.
+            </div>
             <br><br>
             <footer>
                 <a href="#"><img src="static/images/icon-mail.png" class="contact-icon"></a>
@@ -52,15 +90,14 @@
                 <small>
                     Himalayan Expeditions Demo
                     <br>
-                    Website Created by <a href="http://rubinwebdesign.com/" target="_blank">Rubin Web Design</a>
+                    Website Created by <a href="http://gabriellemichaud.com/" target="_blank">Gabrielle Michaud</a>
                 </small>
             </footer>
             <br><br>
-            <!-- Calendly -->
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
             <!-- Bootstrap Navbar -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script src="static/js/bootstrap.js"></script>
+            <script src="static/js/classie.js"></script>
             <script type="text/javascript">
                 $(function () {
                   $(document).scroll(function () {
@@ -68,6 +105,36 @@
                     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
                   });
                 });
+            </script>
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = document.getElementById("contact-form");
+                const successMessage = document.getElementById("success-message");
+
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent the form from submitting via the browser
+
+                    // Simulate form submission
+                    const formData = new FormData(form);
+                    fetch(form.action, {
+                        method: form.method,
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // If the submission was successful, display the success message
+                            successMessage.style.display = "block";
+                            form.reset(); // Optionally, reset the form after successful submission
+                        } else {
+                            // If there was an error, display an error message
+                            console.error('Error submitting form:', response.statusText);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                    });
+                });
+            });
             </script>
         </center>
     </body>
